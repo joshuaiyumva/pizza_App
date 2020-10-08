@@ -58,17 +58,43 @@ section {
     color: red;
 }
 
-#content {
+.bg-text {
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
     text-align: center;
-    padding-top: 100px;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
 }
 
-#content h1 {
+.bg-text h1 {
     font-family: 'Lobster',
         serif;
     font-size: 48px;
     color: #ffffff;
     text-shadow: 4px 4px 4px #aaa;
+}
+
+div#firstDiv {
+    float: left;
+    color: wheat;
+    background-color: rgb(4, 22, 22);
+    padding: 35px 35px 35px 35px;
+    width: 70%;
+    text-align: center;
+
+}
+
+div#secondDiv {
+    float: left;
+    color: wheat;
+    background-color: rgb(25, 68, 15);
+    padding: 35px 35px 35px 35px;
+    width: 30%;
+
 }
