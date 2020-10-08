@@ -15,12 +15,14 @@ section {
     max-width: none;
     height: 100vh;
 }
+
 #welcomeSec,
 #aboutUs,
-#orderSec{
+#orderSec {
     display: inline-block;
     width: 100%;
 }
+
 #welcomeSec {
     background-image: url(../images/backgrounds/pan-pizza-wallpaper-2560x1600-3212_7.jpg);
     background-position: center center center center;
@@ -56,11 +58,6 @@ section {
     color: red;
 }
 
-#navbar img {
-    align: center;
-}
-
-
 #content {
     text-align: center;
     padding-top: 100px;
@@ -75,4 +72,3 @@ section {
     color: #ffffff;
     text-shadow: 4px 4px 4px #aaa;
 }
-

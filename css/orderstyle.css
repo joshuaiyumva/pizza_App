@@ -1,0 +1,38 @@
+    body{
+        background-image: url(../images/backgrounds/screen-1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    .wrapper {
+        position: relative;
+        width: 100%;
+        padding: 10px;
+        margin-top: 15%;
+    }
+
+    section {
+        background: #ffff;
+        position: absolute;
+        display: none;
+        top: 10px;
+        right: 0;
+        width: 85%;
+        height: fit-content;
+        color: #919090;
+    }
+
+    section:first-of-type {
+        display: block;
+        height: fit-content;
+    }
+
+    nav {
+        float: left;
+        width: 150px;
+    }
+
+    ul {
+        list-style: none;
+    }
