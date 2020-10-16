@@ -3,10 +3,7 @@ body {
     box-sizing: border-box;
 
 }
-ul li{
-    display: inline;
-    float: left;
-}
+
 #aboutUs,
 #orderSec {
     display: block;

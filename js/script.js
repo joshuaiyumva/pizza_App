@@ -33,28 +33,32 @@
      $("#topping").val("");
  }
  $("#orderForm").submit(function (event) {
-     event.preventDefault();
-     var typeOf = $("#type option:checked").val();
-     var quantityOf = $("#quantity option:checked").val();
-     var sizeOf = $("#size option:checked").val();
-     var crustsOf = $("#crust option:checked").val();
-     var toppingOf = $("#topping option:checked").val();
-     console.log(sizeOf);
+             event.preventDefault();
+             var typeOf = $("#type option:checked").val();
+             var quantityOf = $("#quantity option:checked").val();
+             var sizeOf = $("#size option:checked").val();
+             var crustsOf = $("#crust option:checked").val();
+             var toppingOf = $("#topping option:checked").val();
+             console.log(typeOf);
+             console.log(quantityOf);
+             console.log(sizeOf);
+             console.log(crustOf);
+             console.log(toppingOf);
 
-     var toppingOf = [];
+             var toppingOf = [];
 
-     $("#topping option:checked").each(function () {
-         toppingOf.push($(this).val());
-         console.log(toppingOf.join(","));
-     });
-     var totalCostTopping = 0;
-     for (var i = 0; i < toppingOf.length; i++) {
-         totalCostTopping += parseInt(topping[toppingOf]);
-         console.log(totalCostTopping);
-     }
-     var newPizza = new PizzaOrder(sizeOf, quantityOf, crustsOf, totalCostTopping);
-     var order = parseInt(newPizza.orderCalc());
-     $("#choices").append("<li>Type:" + typeOf + "<li>", "<li>Size:" + sizeOf + "<li>",
-         "<li>Quantity" + quantityOf + "<li>", "<li>Crust" + crustsOf + "<li>", "<li>Total Price" + order + "<li>");
- });
- resetFields();
+             $("#topping option:checked").each(function () {
+                 toppingOf.push($(this).val());
+                 console.log(toppingOf.join(","));
+             });
+             var totalCostTopping = 0;
+             for (var i = 0; i < toppingOf.length; i++) {
+                 totalCostTopping += parseInt(topping[toppingOf]);
+                 console.log(totalCostTopping);
+             }
+             var newPizza = new PizzaOrder(sizeOf, quantityOf, crustsOf, totalCostTopping);
+             var order = parseInt(newPizza.orderCalc());
+             $("#choices").append("<p>Type:" + typeOf + "</p>", "<p>Size:" + sizeOf + "</p>",
+                 "<p>Quantity: " + quantityOf + "</p>", "<p>Crust" + crustsOf + "</p>", "<p>Total Price" + order + "</p>");
+             resetFields();
+         });
