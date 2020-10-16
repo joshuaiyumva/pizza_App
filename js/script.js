@@ -54,7 +54,7 @@
      }
      var newPizza = new PizzaOrder(sizeOf, quantityOf, crustsOf, totalCostTopping);
      var order = parseInt(newPizza.orderCalc());
-     $("#choices").last().append("<li>Type:" + typeOf + "<li>", "<li>Size:" + sizeOf + "<li>",
+     $("#choices").append("<li>Type:" + typeOf + "<li>", "<li>Size:" + sizeOf + "<li>",
          "<li>Quantity" + quantityOf + "<li>", "<li>Crust" + crustsOf + "<li>", "<li>Total Price" + order + "<li>");
  });
  resetFields();
