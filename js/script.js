@@ -1,9 +1,11 @@
- function PizzaOrder(pizzaSizes, pizzaQuantity, pizzaCrust, pizzaTopping) {
+ function PizzaOrder(pizzaTypes, pizzaSizes, pizzaQuantity, pizzaCrust, pizzaTopping) {
+     this.types = pizzaTypes;
      this.sizes = pizzaSizes;
      this.Qnty = pizzaQuantity;
      this.Crust = pizzaCrust;
      this.Topping = pizzaTopping;
  }
+
  var size = {
      small: 2000,
      medium: 4000,
@@ -24,35 +26,35 @@
  }
 
  function resetFields() {
+     $("#type").val("");
      $("#size").val("");
      $("#quantity").val("");
      $("#crust").val("");
      $("#topping").val("");
  }
- $(document).ready(function () {
-     $("#orderForm").submit(function (event) {
-         event.preventDefault();
-         var quantityOf = $("#quantity option:checked").val();
-         var sizeOf = $("#size").find(":selected").text();
-         var crustsOf = $("#crust").find(":selected").text();
-         var toppingOf = $("#topping option:checked").val();
-         //   console.log(quantityOf);
+ $("#orderForm").submit(function (event) {
+     event.preventDefault();
+     var typeOf = $("#type option:checked").val();
+     var quantityOf = $("#quantity option:checked").val();
+     var sizeOf = $("#size option:checked").val();
+     var crustsOf = $("#crust option:checked").val();
+     var toppingOf = $("#topping option:checked").val();
+     console.log(sizeOf);
 
-         var toppingOf = [];
+     var toppingOf = [];
 
-         $("#topping option:checked").each(function () {
-             toppingOf.push($(this).val());
-             console.log(toppingOf.join(","));
-         });
-         var totalCostTopping = 0;
-         for (var i = 0; i < toppingOf.length; i++) {
-             totalCostTopping += parseInt(topping[toppingOf]);
-             console.log(totalCostTopping);
-         }
-         var newPizza = new PizzaOrder(sizeOf, quantityOf, crustsOf, totalCostTopping);
-         var order = parseInt(newPizza.orderCalc());
-         $("#choices").last().append("<li>Size:" + sizeOf + "<li>",
-             "<li>Quantity" + quantityOf + "<li>", "<li>Crust" + crustsOf + "<li>", "<li>Total Price" + order + "<li>");
+     $("#topping option:checked").each(function () {
+         toppingOf.push($(this).val());
+         console.log(toppingOf.join(","));
      });
-     resetFields();
+     var totalCostTopping = 0;
+     for (var i = 0; i < toppingOf.length; i++) {
+         totalCostTopping += parseInt(topping[toppingOf]);
+         console.log(totalCostTopping);
+     }
+     var newPizza = new PizzaOrder(sizeOf, quantityOf, crustsOf, totalCostTopping);
+     var order = parseInt(newPizza.orderCalc());
+     $("#choices").last().append("<li>Type:" + typeOf + "<li>", "<li>Size:" + sizeOf + "<li>",
+         "<li>Quantity" + quantityOf + "<li>", "<li>Crust" + crustsOf + "<li>", "<li>Total Price" + order + "<li>");
  });
+ resetFields();
