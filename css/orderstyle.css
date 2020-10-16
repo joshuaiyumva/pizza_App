@@ -1,38 +1,44 @@
-    body{
-        background-image: url(../images/backgrounds/screen-1.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+html,
+body {
+    box-sizing: border-box;
 
-    }
-    .wrapper {
-        position: relative;
-        width: 100%;
-        padding: 10px;
-        margin-top: 15%;
-    }
+}
 
-    section {
-        background: #ffff;
-        position: absolute;
-        display: none;
-        top: 10px;
-        right: 0;
-        width: 85%;
-        height: fit-content;
-        color: #919090;
-    }
+h1 {
+    font-family: 'Piedra',
+        cursive;
+    text-shadow: 0 0 3px #fcfcfc,
+        0 0 5px #000000;
+}
+.offer{
+    text-align: center;
+}
 
-    section:first-of-type {
-        display: block;
-        height: fit-content;
-    }
+p {
+    font-family: 'Special Elite',
+        cursive;
+}
+hr{
+    width: 75%;
+    height:3px;
+    border-width:0;
+    color:gray;
+    background-color:gray
+}
 
-    nav {
-        float: left;
-        width: 150px;
-    }
+#welcomeSec,
+#aboutUs,
+#menuSec,
+#footerSec {
+    width: 100%;
+    padding-top: 50px;
 
-    ul {
-        list-style: none;
-    }
+}
+#footerSec{
+    background-image: url(../images/backgrounds/4O2N6x.jpg);
+
+}
+.footer{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+

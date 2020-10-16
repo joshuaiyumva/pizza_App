@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <script src="jquery-3.5.1.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Size</label>
+                        <select class="form-control" id="size">
+                            <option>Small</option>
+                            <option>Medium</option>
+                            <option>Large</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Qnty</label>
+                        <select class="form-control" id="quantity">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Crust</label>
+                        <select class="form-control" id="crust">
+                            <option>Crispy</option>
+                            <option>Stuffed</option>
+                            <option>Gluten-free</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect2">Toppings</label>
+                        <select multiple class="form-control" id="topping">
+                            <option>BlackPepper</option>
+                            <option>Onions</option>
+                        </select>
+                    </div>
+                    <button id="submitBtn" type="submit" class="btn btn-info">Make your
+                            order</button>
+                </form>
+            </div>
+
+
+            <div class="col-md-4">
+                <h3>Pizza choice:</h3>
+                <ul id="choices">
+
+                </ul>
+            </div>
+        </div>
+    </div>

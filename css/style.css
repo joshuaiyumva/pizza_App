@@ -1,30 +1,21 @@
-body,
-html {
-    font-family: cambria, sans-serif;
-    display: block;
-}
-
+html,
 body {
-    font-family: Brush Script MT;
-}
+    box-sizing: border-box;
 
-section {
-    width: 100%;
-    height: 100vh;
-    display: block;
-    max-width: none;
-    height: 100vh;
 }
-
-#welcomeSec,
+ul li{
+    display: inline;
+    float: left;
+}
 #aboutUs,
 #orderSec {
-    display: inline-block;
+    display: block;
     width: 100%;
-    height: max-content;
+    display: block;
+    margin-bottom: 20px;
 }
 
-#welcomeSec {
+section#welcomeSec {
     background-image: url(../images/backgrounds/pan-pizza-wallpaper-2560x1600-3212_7.jpg);
     background-position: center center center center;
     backface-visibility: hidden;
@@ -32,23 +23,25 @@ section {
     background-size: cover;
     animation: bgChange 30s linear infinite 0s;
     animation-timing-function: ease-in-out;
+    width: 100%;
+    height: max-content;
+    display: block;
+    margin-bottom: 20px;
 
 
 }
 
 #navbar {
-    background-color: #ffffff;
-    position: fixed;
-    top: -80px;
+    top: 0;
     width: 100%;
     display: block;
-    transition: top 0.3s;
+    margin-bottom: 20px;
 }
 
 #navbar a {
     float: left;
     display: block;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     padding: 15px;
     text-decoration: none;
@@ -56,49 +49,133 @@ section {
 }
 
 #navbar a:hover {
-    color: red;
+    color: #ff9900;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #content {
     text-align: center;
-    padding-top: 100px;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     padding-bottom: 50px;
 }
 
 #content h1 {
-    font-family: 'Lobster',
-        serif;
+    font-family: Lobster, serif;
     font-size: 48px;
     color: #ffffff;
     text-shadow: 4px 4px 4px #aaa;
 }
 
-div#firstDiv {
-    float: left;
-    color: wheat;
-    background-color: rgb(4, 22, 22);
+div#firstInfo {
+    color: rgb(56, 56, 56);
     padding: 35px 35px 35px 35px;
-    width: 70%;
-    text-align: center;
+    width: 90%;
 
 }
 
-div#secondDiv {
-    float: left;
-    color: wheat;
-    background-color: rgb(25, 68, 15);
-    padding: 35px 35px 35px 35px;
-    width: 30%;
+#orderSec {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 50px 20px 50px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
 
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.wrapper .pizzaList ul li {
+    display: inline;
+
+}
+
+#descSec {
+    position: absolute;
+    display: none;
+    top: 10px;
+    right: 0;
+    width: 85%;
+    height: fit-content;
+    color: #919090;
+}
+
+#descSec:first-of-type {
+    display: block;
+    height: fit-content;
+}
+
+nav#pizzaList {
+    float: left;
+    width: 150px;
+    height: fit-content;
+}
+
+ul {
+    list-style: none;
+}
+
+img.floatingL {
+    float: left;
+    margin-right: 20px;
+}
+
+
+h1 {
+    font-family: 'Piedra',
+        cursive;
+    text-shadow: 0 0 3px #fcfcfc,
+        0 0 5px #000000;
+}
+
+.offer {
+    text-align: center;
+}
+
+p {
+    font-family: 'Special Elite',
+        cursive;
+}
+
+hr {
+    width: 75%;
+    height: 3px;
+    border-width: 0;
+    color: gray;
+    background-color: gray
+}
+
+#welcomeSec,
+#aboutUs,
+#menuSec,
+#footerSec {
+    width: 100%;
+    padding-top: 50px;
+
+}
+
+#footerSec {
+    background-image: url(../images/backgrounds/4O2N6x.jpg);
+
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 @media screen and (max-width: 500px) {
-    #content {}
-
     #navbar a {
         float: none;
+        display: block;
+    }
+
+    #firstInfo {
         display: block;
     }
 }
