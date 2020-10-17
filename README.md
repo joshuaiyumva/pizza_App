@@ -25,7 +25,7 @@ For example: the designs are not well done and needs some renovating or maybe th
 
 #### you can write me via e-mail: joshuaiyumva@gmail.com , and I will respond to your questions, or request.
 #### Hope you Like it...
-#### to view the website pages visit: 
+#### to view the website pages visit: https://joshuaiyumva.github.io/pizza_App/
 ### License...
 
 MIT License
